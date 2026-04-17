@@ -1,0 +1,17 @@
+{
+  "name": "mern-doctor-appointment-system",
+  "version": "1.0.0",
+  "description": "Doctor Appointment Booking System - Full Stack",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run frontend\" \"npm run admin\"",
+    "server": "cd mern-doctor-appointment-booking-system-main/backend && npm start",
+    "frontend": "cd mern-doctor-appointment-booking-system-main/frontend && npm run dev",
+    "admin": "cd mern-doctor-appointment-booking-system-main/admin-portal && npm run dev",
+    "install-all": "npm install && cd mern-doctor-appointment-booking-system-main/backend && npm install && cd ../frontend && npm install && cd ../admin-portal && npm install",
+    "build": "cd mern-doctor-appointment-booking-system-main/frontend && npm run build && cd ../admin-portal && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
